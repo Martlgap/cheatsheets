@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_dir: docs/md-sheet
+          input_dir: docs/md-sheets
           output_dir: docs/html-sheets
           images_dir: docs/images
           # for example <img src="./images/file-name.png">
