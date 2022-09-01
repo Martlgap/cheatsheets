@@ -18,6 +18,9 @@ jobs:
         with:
           input_dir: docs/md-sheet
           output_dir: docs/html-sheets
+          images_dir: docs/images
+          # for example <img src="./images/file-name.png">
+          image_import: ./images
           build_html: true
       - uses: actions/upload-artifact@v1
         with:
