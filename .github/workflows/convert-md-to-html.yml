@@ -9,18 +9,17 @@ on:
       - 'docs/md-sheets/**.md'
 
 jobs:
-  converttohtml:
+  converttopdf:
     name: Build HTML
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_dir: docs
-          output_dir: html-sheets
-          # Default is true, can set to false to only get PDF files
+          input_dir: docs/md-sheet
+          output_dir: docs/html-sheets
           build_html: true
       - uses: actions/upload-artifact@v1
         with:
           name: docs
-          path: html-sheets
+          path: docs/html-sheets
