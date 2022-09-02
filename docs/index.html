@@ -15,7 +15,7 @@
   <body>
     <div style="text-align: center">
       <a href="https://martlgap.github.io/cheatsheets" style="color: black; text-decoration-line: none">martlgap.github.io/cheatsheets</a>
-      <button style="float: right; margin: 30px"><a href="https://github.com/martlgap/cheatsheets" target="_blank" style="color: black; text-decoration-line: none">Visit on GitHub</a></button>
+      <button style="float: right; margin: 30px"><a href="https://github.com/martlgap/cheatsheets" target="_blank" style="color: black; text-decoration-line: none">Switch to GitHub</a></button>
     </div>
     <div class="header">
       <h1>Martlgap's</h1>
@@ -42,7 +42,7 @@
         </code></pre>
 
         <h3>Make sublime text accessable via terminal</h3>
-        <pre><code class="language-bash">
+        <pre><code class="language-shell">
           ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
         </code></pre>
         <hr />
@@ -55,7 +55,7 @@
         <pre><code class="language-bash">
           mkdir ~/.ssh # Creates a new hidden directory in your home folder
         </code></pre>
-        <pre><code class="language-bash">
+        <pre><code class="language-shell">
           subl ~/.ssh/config # Creates/Modifies the ssh configuration file
         </code></pre>
         <p>Download a sample configuration <a href="https://github.com/martlgap/cheatsheets/config" target="_blank" style="color: black;">here</a>.</p>
@@ -82,7 +82,7 @@
           subl ~/oh-my-zsh/themes/&lt;mytheme&gt;.zsh-theme
         </code></pre>
         <p>and insert the following text</p>
-        <pre><code class="language-zshrc">
+        <pre><code class="language-bash">
           PROMPT="%{$fg_bold[green]%}%m "
           PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
           PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
@@ -97,11 +97,11 @@
           subl ~/.zshrc
         </code></pre>
         <p>replace the following line</p>
-        <pre><code class="language-zshrc">
+        <pre><code class="language-bash">
           ZSH_THEME="robbyrussell"
         </code></pre>
         <p>with your new theme</p>
-        <pre><code class="language-zshrc">
+        <pre><code class="language-bash">
           ZSH_THEME="&lt;mytheme&gt;"
         </code></pre>
 
@@ -110,7 +110,7 @@
         <p>open the configuration file</p>
         <pre><code class="language-bash">sudo visudo</code></pre>
         <p>and add the following line</p>
-        <pre><code class="language-zshrc">
+        <pre><code class="language-bash">
           &lt;user&gt; ALL=NOPASSWD:/sbin/reboot
         </code></pre>
       </div>
