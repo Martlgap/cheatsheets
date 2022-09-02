@@ -1,5 +1,158 @@
-<html>
-<body>
-	<h1> TEST </h1>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" />
+    <meta name="author" content="Martin Knoche" />
+    <meta name="description" content="TBD" />
+    <title>Matlgaps's Cheat Sheets</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </header>
+
+  <body>
+    <div style="text-align: center">
+      <a href="https://martlgap.github.io/cheatsheets" style="color: black; text-decoration-line: none">martlgap.github.io/cheatsheets</a>
+      <button style="float: right; margin: 30px"><a href="https://github.com/martlgap/cheatsheets" target="_blank" style="color: black; text-decoration-line: none">Visit on GitHub</a></button>
+    </div>
+    <div class="header">
+      <h1>Martlgap's</h1>
+      <h1>Cheat Sheet Collection</h1>
+      <p>Here you will find my collection of cheat sheets. I also added a few HowTo's. Configuration files can be found in the GitHub Repo.</p>
+    </div>
+
+    <div class="row1-container">
+      <div class="box cyan">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/MacOS_logo_%282017%29.svg" height="60px" alt="" />
+        <h2>MacOS Setup</h2>
+        <hr />
+        
+        <h3>How I set up fresh Machine</h3>
+        <p>This shows how I set up my system</p>
+        <pre><code class="language-git">
+			  git status
+			  git push
+        </code></pre>
+        <p>This shows how I set up my system</p>
+        <pre><code class="language-bash">
+			  brew install tmux
+			  brew doctor
+        </code></pre>
+
+        <h3>Make sublime text accessable via terminal</h3>
+        <pre><code class="language-bash">
+          ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+        </code></pre>
+        <hr />
+        <h3>Toggle hidden files in Finder</h3>
+        <pre><code class="language-bash">
+          Command” + “Shift” + “.”
+        </code></pre>
+        <hr />
+        <h3>Setup SSH Configuration</h3>
+        <pre><code class="language-bash">
+          mkdir ~/.ssh # Creates a new hidden directory in your home folder
+        </code></pre>
+        <pre><code class="language-bash">
+          subl ~/.ssh/config # Creates/Modifies the ssh configuration file
+        </code></pre>
+        <p>Download a sample configuration <a href="https://github.com/martlgap/cheatsheets/config" target="_blank" style="color: black;">here</a>.</p>
+
+        <hr />
+        <h3>Key-Pair Authentication between Machines</h3>
+        <pre><code class="language-bash">
+          ssh-keygen # this generates a new pair of keys
+        </code></pre>
+        <p>copy the key to all your ssh remotes aliased &lt;ssh machine&gt; in your .ssh/config</p>
+        <pre><code class="language-bash">
+          ssh-copy-id &lt;ssh machine&gt; # this generates a new pair of keys
+        </code></pre>
+      </div>
+
+      <div class="box cyan">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/High-contrast-utilities-terminal.svg" height="60px" alt="" />
+        <h2>Terminal</h2>
+
+        <hr />
+        <h3>How to change the color scheme</h3>
+        <p>Generate a new theme &lt;mytheme&gt; with with:</p>
+        <pre><code class="language-bash">
+          subl ~/oh-my-zsh/themes/&lt;mytheme&gt;.zsh-theme
+        </code></pre>
+        <p>and insert the following text</p>
+        <pre><code class="language-zshrc">
+          PROMPT="%{$fg_bold[green]%}%m "
+          PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+          PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+
+          ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+          ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+          ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
+          ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+        </code></pre>
+        <p>Then open the following file with:</p>
+        <pre><code class="language-bash">
+          subl ~/.zshrc
+        </code></pre>
+        <p>replace the following line</p>
+        <pre><code class="language-zshrc">
+          ZSH_THEME="robbyrussell"
+        </code></pre>
+        <p>with your new theme</p>
+        <pre><code class="language-zshrc">
+          ZSH_THEME="&lt;mytheme&gt;"
+        </code></pre>
+
+        <hr />
+        <h3>Allow a specific user to reboot machine</h3>
+        <p>open the configuration file</p>
+        <pre><code class="language-bash">sudo visudo</code></pre>
+        <p>and add the following line</p>
+        <pre><code class="language-zshrc">
+          &lt;user&gt; ALL=NOPASSWD:/sbin/reboot
+        </code></pre>
+      </div>
+
+      <div class="box box-down cyan">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" height="60px" alt="" />
+        <h2>Tensorflow</h2>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+      </div>
+    </div>
+
+    <div class="row2-container">
+      <div class="box cyan">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" height="40px" alt="" />
+        <h2>Git Versioning System</h2>
+        <p>Regularly evaluates our talent to ensure quality</p>
+      </div>
+
+      <div class="box cyan">
+        <img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" height="50px" alt="" />
+        <h2>Nvidia Graphics Cards</h2>
+        <p>Regularly evaluates our talent to ensure quality</p>
+      </div>
+    </div>
+
+    <div class="row1-container">
+      <div class="box cyan">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg" height="50px" alt="" />
+        <h2>PyCharm IDE</h2>
+        <p>Regularly evaluates our talent to ensure quality</p>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <p>Made with <span style="color: black">&hearts;</span> by Martin</p>
+    <p><span style="color: black">&#169;</span> 2022</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.js"></script>
+  <script src="js/copy_buttons.js"></script>
+  <script src="js/no_tabs.js"></script>
 </html>
