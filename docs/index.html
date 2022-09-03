@@ -13,76 +13,147 @@
   </header>
 
   <body>
-    <div style="text-align: center">
+    <div class="container">
       <a href="https://martlgap.github.io/cheatsheets" style="color: black; text-decoration-line: none">martlgap.github.io/cheatsheets</a>
-      <button style="float: right; margin: 30px"><a href="https://github.com/martlgap/cheatsheets" target="_blank" style="color: black; text-decoration-line: none">Switch to GitHub</a></button>
     </div>
     <div class="header">
       <h1>Martlgap's</h1>
       <h1>Cheat Sheet Collection</h1>
-      <p>Here you will find my collection of cheat sheets. I also added a few HowTo's. Configuration files can be found in the GitHub Repo.</p>
+      <p>Here is a tiny collection of HowTos, configurations, shortcuts and cheat sheets. Files can be also found in the GitHub Repo.</p>
+    </div>
+    <div class="container">
+      <div class="container1">
+        <div class="item">
+          <button class="btn btn-0">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>MAC OS Setup</span>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-1">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>Tensorflow</span>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-2">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>Git</span>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-3">
+            <a href="#pycharm">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span>PyCharm</span>
+            </a>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-4">
+            <a href="#git">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span>Shortcuts</span>
+            </a>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-5">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>SSH</span>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-6">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>Git</span>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="row1-container">
-      <div class="box cyan">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/MacOS_logo_%282017%29.svg" height="60px" alt="" />
-        <h2>MacOS Setup</h2>
-        <hr />
-        
-        <h3>How I set up fresh Machine</h3>
-        <p>This shows how I set up my system</p>
-        <pre><code class="language-git">
+    <div class="container">
+      <div class="container2">
+        <div class="box box-0">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/MacOS_logo_%282017%29.svg" height="60px" alt="" />
+          <h2>MacOS Setup</h2>
+          <hr />
+
+          <h3>How I set up fresh Machine</h3>
+          <p>This shows how I set up my system</p>
+          <pre><code class="language-git">
 			  git status
 			  git push
         </code></pre>
-        <p>This shows how I set up my system</p>
-        <pre><code class="language-bash">
+          <p>This shows how I set up my system</p>
+          <pre><code class="language-bash">
 			  brew install tmux
 			  brew doctor
         </code></pre>
 
-        <h3>Make sublime text accessable via terminal</h3>
-        <pre><code class="language-shell">
+          <h3>Make sublime text accessable via terminal</h3>
+          <pre><code class="language-shell">
           ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
         </code></pre>
-        <hr />
-        <h3>Toggle hidden files in Finder</h3>
-        <pre><code class="language-bash">
+          <hr />
+          <h3>Toggle hidden files in Finder</h3>
+          <pre><code class="language-bash">
           Command” + “Shift” + “.”
         </code></pre>
-        <hr />
-        <h3>Setup SSH Configuration</h3>
-        <pre><code class="language-bash">
+          <hr />
+          <h3>Setup SSH Configuration</h3>
+          <pre><code class="language-bash">
           mkdir ~/.ssh # Creates a new hidden directory in your home folder
         </code></pre>
-        <pre><code class="language-shell">
+          <pre><code class="language-shell">
           subl ~/.ssh/config # Creates/Modifies the ssh configuration file
         </code></pre>
-        <p>Download a sample configuration <a href="https://github.com/martlgap/cheatsheets/config" target="_blank" style="color: black;">here</a>.</p>
+          <p>Download a sample configuration <a href="https://github.com/martlgap/cheatsheets/config" target="_blank" style="color: black">here</a>.</p>
 
-        <hr />
-        <h3>Key-Pair Authentication between Machines</h3>
-        <pre><code class="language-bash">
+          <hr />
+          <h3>Key-Pair Authentication between Machines</h3>
+          <pre><code class="language-bash">
           ssh-keygen # this generates a new pair of keys
         </code></pre>
-        <p>copy the key to all your ssh remotes aliased &lt;ssh machine&gt; in your .ssh/config</p>
-        <pre><code class="language-bash">
+          <p>copy the key to all your ssh remotes aliased &lt;ssh machine&gt; in your .ssh/config</p>
+          <pre><code class="language-bash">
           ssh-copy-id &lt;ssh machine&gt; # this generates a new pair of keys
         </code></pre>
-      </div>
+        </div>
 
-      <div class="box cyan">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/High-contrast-utilities-terminal.svg" height="60px" alt="" />
-        <h2>Terminal</h2>
+        <div class="box box-1">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/High-contrast-utilities-terminal.svg" height="60px" alt="" />
+          <h2>Terminal</h2>
 
-        <hr />
-        <h3>How to change the color scheme</h3>
-        <p>Generate a new theme &lt;mytheme&gt; with with:</p>
-        <pre><code class="language-bash">
+          <hr />
+          <h3>How to change the color scheme</h3>
+          <p>Generate a new theme &lt;mytheme&gt; with with:</p>
+          <pre><code class="language-bash">
           subl ~/oh-my-zsh/themes/&lt;mytheme&gt;.zsh-theme
         </code></pre>
-        <p>and insert the following text</p>
-        <pre><code class="language-bash">
+          <p>and insert the following text</p>
+          <pre><code class="language-bash">
           PROMPT="%{$fg_bold[green]%}%m "
           PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
           PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
@@ -92,55 +163,58 @@
           ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
           ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
         </code></pre>
-        <p>Then open the following file with:</p>
-        <pre><code class="language-bash">
+          <p>Then open the following file with:</p>
+          <pre><code class="language-bash">
           subl ~/.zshrc
         </code></pre>
-        <p>replace the following line</p>
-        <pre><code class="language-bash">
+          <p>replace the following line</p>
+          <pre><code class="language-bash">
           ZSH_THEME="robbyrussell"
         </code></pre>
-        <p>with your new theme</p>
-        <pre><code class="language-bash">
+          <p>with your new theme</p>
+          <pre><code class="language-bash">
           ZSH_THEME="&lt;mytheme&gt;"
         </code></pre>
 
-        <hr />
-        <h3>Allow a specific user to reboot machine</h3>
-        <p>open the configuration file</p>
-        <pre><code class="language-bash">sudo visudo</code></pre>
-        <p>and add the following line</p>
-        <pre><code class="language-bash">
+          <hr />
+          <h3>Allow a specific user to reboot machine</h3>
+          <p>open the configuration file</p>
+          <pre><code class="language-bash">sudo visudo</code></pre>
+          <p>and add the following line</p>
+          <pre><code class="language-bash">
           &lt;user&gt; ALL=NOPASSWD:/sbin/reboot
         </code></pre>
-      </div>
+        </div>
 
-      <div class="box box-down cyan">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" height="60px" alt="" />
-        <h2>Tensorflow</h2>
-        <p>Uses data from past projects to provide better delivery estimates</p>
-      </div>
-    </div>
+        <div class="box box-2" id="tensorflow">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" height="60px" alt="" />
+          <h2>Tensorflow</h2>
+          <p>Uses data from past projects to provide better delivery estimates</p>
+        </div>
 
-    <div class="row2-container">
-      <div class="box cyan">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" height="40px" alt="" />
-        <h2>Git Versioning System</h2>
-        <p>Regularly evaluates our talent to ensure quality</p>
-      </div>
+        <div class="box box-3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" height="40px" alt="" />
+          <h2>Git Versioning System</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+        </div>
 
-      <div class="box cyan">
-        <img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" height="50px" alt="" />
-        <h2>Nvidia Graphics Cards</h2>
-        <p>Regularly evaluates our talent to ensure quality</p>
-      </div>
-    </div>
+        <div class="box box-4">
+          <img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" height="50px" alt="" />
+          <h2>Nvidia Graphics Cards</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+        </div>
 
-    <div class="row1-container">
-      <div class="box cyan">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg" height="50px" alt="" />
-        <h2>PyCharm IDE</h2>
-        <p>Regularly evaluates our talent to ensure quality</p>
+        <div class="box box-5" id="pycharm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg" height="50px" alt="" />
+          <h2>PyCharm IDE</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+        </div>
+
+        <div class="box box-6" id="pycharm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg" height="50px" alt="" />
+          <h2>PyCharm IDE</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+        </div>
       </div>
     </div>
   </body>
@@ -155,4 +229,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.js"></script>
   <script src="js/copy_buttons.js"></script>
   <script src="js/no_tabs.js"></script>
+  <script src="js/js-colormaps.js"></script>
+  <script src="js/colorize.js"></script>
 </html>
