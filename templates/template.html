@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Matlgaps's Cheat Sheets</title>
+    <meta name="description" content="A collection of HowTos, configurations, and cheatsheets." />
+    <meta name="author" content="Martin Knoche" />
+
+    <meta property="og:title" content="Matlgaps's Cheat Sheets" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/" />
+    <meta property="og:description" content="A simple HTML5 Template for new projects." />
+    <meta property="og:image" content="./preview.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="https://martlgap.github.io/cheatsheets" style="color: black; text-decoration-line: none">martlgap.github.io/cheatsheets</a>
+    </div>
+
+    <div class="header">
+      <h1>Martlgap's</h1>
+      <h1>Cheat Sheet Collection</h1>
+      <p>Here is a tiny collection of HowTos, configurations, shortcuts and cheat sheets. Files can be also found in the GitHub Repo.</p>
+    </div>
+
+    <div class="container">
+      <div class="container1">
+        % for key in datadict:
+        <div class="item">
+          <button class="btn btn-${loop.index}">
+            <a href="#${key}">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span>${key}</span>
+            </a>
+          </button>
+        </div>
+        % endfor
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container2">
+        % for key in datadict:
+        <div class="box box-${loop.index}" id="${key}">${datadict[key]}</div>
+        % endfor
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <p>Made with <span style="color: black">&hearts;</span> by Martin</p>
+    <p><span style="color: black">&#169;</span> 2022</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.js"></script>
+  <script src="js/copy_buttons.js"></script>
+  <script src="js/no_tabs.js"></script>
+  <script src="js/js-colormaps.js"></script>
+  <script src="js/colorize.js"></script>
+</html>
