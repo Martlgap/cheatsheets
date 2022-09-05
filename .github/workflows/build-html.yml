@@ -30,13 +30,14 @@ jobs:
           
       - name: commit files
         run: |
-          git config --local user.email "martin.knoche@tum.de"
+          git config --local user.email "Github-Action-Runner"
           git config --local user.name "Github-Action"
           git add -A
           git commit -m "html generated" -a
           
       - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.TOKEN_FOR_PRODUCTION }}
-          branch: production  
+          branch: production
+          force_with_lease: true
