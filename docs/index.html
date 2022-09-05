@@ -116,6 +116,17 @@
             </a>
           </button>
         </div>
+        <div class="item">
+          <button class="btn btn-7">
+            <a href="#Tipps&Tricks">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span>Tipps&Tricks</span>
+            </a>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -173,6 +184,118 @@ TESTTTTTTTTTTTTT</p>
 <pre><code class="bash language-bash">git dsdasd
 git push
 </code></pre>
+</div>
+        <div class="box box-7" id="Tipps&Tricks"><h2>SSL Problem when downloading via Python Code on Mac OS</h2>
+
+<pre><code class="shell language-shell">/Applications/Python\ 3.6/Install\ Certificates.command
+</code></pre>
+
+<h2>List Infos of CPU</h2>
+
+<pre><code class="shell language-shell">lscpu
+</code></pre>
+
+<h2>Error: Core Dumped when importing tensorflow in python</h2>
+
+<p>Most likely tensorflow package was build for AVX support and CPU does not support it! </p>
+
+<h2>How to change CUDA Version on Machine:</h2>
+
+<pre><code class="shell language-shell">sudo rm /usr/local/cuda
+sudo ln -s /usr/local/cuda-11.0 /usr/local/cuda
+</code></pre>
+
+<h3>Start automatically every second updating GPU-Info Tab</h3>
+
+<pre><code class="bash language-bash">watch -n 1 nvidia-smi
+</code></pre>
+
+<h2>List Size of Folders:</h2>
+
+<pre><code class="shell language-shell">du -sh *
+</code></pre>
+
+<h2>Check Disc Usage</h2>
+
+<pre><code class="bash language-bash">df -h
+</code></pre>
+
+<h2>Check size of specific folder:</h2>
+
+<pre><code class="bash language-bash">du -hs &lt;folder&gt;
+</code></pre>
+
+<h2>Adjust rights to Folder:</h2>
+
+<pre><code class="shell language-shell">chmod g+w /folder/ -R
+</code></pre>
+
+<h2>Check how long PC is up:</h2>
+
+<pre><code class="bash language-bash">uptime
+</code></pre>
+
+<p>Split .tar files into many files with specific maximum file size</p>
+
+<p>split -b 1024m file.tar.gz</p>
+
+<p>tar -C ../myfolder -xfvz /mytarfile.tar (extract into spec folder)</p>
+
+<p>| Mehrere Dateien als GZIP-Archiv komprimieren  | tar cfvz Archiv.tar.gz datei1 datei2  | Archiv.tar.gz       |
+|-----------------------------------------------|---------------------------------------|---------------------|
+| GZIP-Archiv entpacken                         | tar xfvz Archiv.tar.gz                | datei1, datei2, ... |</p>
+
+<h2>Generate requirements.txt automatically and only project-specific:</h2>
+
+<pre><code class="bash language-bash">pip install pipreqs
+#then
+pipreqs path/to/project
+</code></pre>
+
+<h2>When facing the following error:</h2>
+
+<p>ImportError: bad magic number in : b'\x03\xf3\r\n'</p>
+
+<pre><code class="bash language-bash">find . -name "*.pyc" -exec rm -f {} \;
+</code></pre>
+
+<h2>How to trigger Push on Tags:</h2>
+
+<pre><code class="bash language-bash">git tag 0.2
+git push -f --tags
+</code></pre>
+
+<h2>Problem with unmet dependencies when installing cuda or nvidia:</h2>
+
+<pre><code class="bash language-bash">sudo apt purge *nvidia*
+</code></pre>
+
+<h2>Get number of files in dir and subdirs:</h2>
+
+<pre><code class="bash language-bash">find . -type f | wc -l
+</code></pre>
+
+<h2>Checkout GIT from specific date</h2>
+
+<pre><code class="bash language-bash">git checkout `git rev-list -n 1 --before="2020-05-27 13:37" master`
+</code></pre>
+
+<h2>Debug Python Code with inline Terminal</h2>
+
+<pre><code class="python language-python">import pdb
+pdb.set_trace()
+</code></pre>
+
+<h2>Set Path for loading Modules:</h2>
+
+<pre><code class="bash language-bash">PYTHONPATH=/usr/home/.... python &lt;script.py&gt;
+</code></pre>
+
+<h2>Problem with SSH Keys:</h2>
+
+<p>..differs from the key for IP address ... 
+on remote machine:
+ssh-keygen -R 129.187.227.220</p>
 </div>
       </div>
     </div>
