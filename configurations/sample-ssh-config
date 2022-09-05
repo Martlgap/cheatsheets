@@ -1,0 +1,32 @@
+
+# Other Remote Computers
+
+# ------ other computers ------ #
+
+# Computers at Home
+
+# MacBook Pro
+Host macbookpro
+    HostName 192.168.178.20
+    User martinknoche
+
+# MacMini
+Host macmini
+    HostName 192.168.178.42
+    User martinknoche
+
+# MacMini (WLAN)
+Host macminiw
+    HostName 192.168.178.43
+    User martinknoche
+
+# Template Configuration
+Host *
+    AddKeysToAgent yes
+    ForwardAgent yes
+    IdentityFile /Users/martinknoche/.ssh/id_rsa
+    ForwardX11Timeout 596h
+    XAuthLocation /opt/X11/bin/xauth
+    ServerAliveInterval 120
+    ForwardX11 yes
+    User kno
