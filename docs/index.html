@@ -37,54 +37,6 @@
       <p>Here is a tiny collection of HowTos, configurations, shortcuts and cheat sheets. Files can be also found in the GitHub Repo.</p>
     </div>
 
-<<<<<<< HEAD
-    <div class="row1-container">
-      <div class="box cyan">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/MacOS_logo_%282017%29.svg" height="60px" alt="" />
-        <h2>MacOS Setup</h2>
-        <hr />
-        
-        <h3>How I set up fresh Machine</h3>
-        <p>This shows how I set up my system</p>
-        <pre><code class="language-git">
-			  git status
-			  git push
-        </code></pre>
-        
-        <h3>Customize your computer's name</h3>
-        <pre><code class="language-bash">
-          sudo scutil --set HostName &lt;new-name&gt; # this sets a new hostname
-        </code></pre>
-
-        <h3>Make sublime text accessable via terminal</h3>
-        <pre><code class="language-shell">
-          ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-        </code></pre>
-        <hr />
-        <h3>Toggle hidden files in Finder</h3>
-        <pre><code class="language-bash">
-          Command” + “Shift” + “.”
-        </code></pre>
-        <hr />
-        <h3>Setup SSH Configuration</h3>
-        <pre><code class="language-bash">
-          mkdir ~/.ssh # Creates a new hidden directory in your home folder
-        </code></pre>
-        <pre><code class="language-shell">
-          subl ~/.ssh/config # Creates/Modifies the ssh configuration file
-        </code></pre>
-        <p>Download a sample configuration <a href="https://github.com/martlgap/cheatsheets/config" target="_blank" style="color: black;">here</a>.</p>
-
-        <hr />
-        <h3>Key-Pair Authentication between Machines</h3>
-        <pre><code class="language-bash">
-          ssh-keygen # this generates a new pair of keys
-        </code></pre>
-        <p>copy the key to all your ssh remotes aliased &lt;ssh machine&gt; in your .ssh/config</p>
-        <pre><code class="language-bash">
-          ssh-copy-id &lt;ssh machine&gt; # this generates a new pair of keys
-        </code></pre>
-=======
     <div class="container">
       <div class="container1">
         <div class="item">
@@ -164,13 +116,12 @@
             </a>
           </button>
         </div>
->>>>>>> a55036ead4d49b468a5acf346a4b6b7f933c85fa
       </div>
     </div>
 
     <div class="container">
       <div class="container2">
-        <div class="box box-0" id="SSH"><p><img src="https://cdn-icons-png.flaticon.com/512/5262/5262032.png" width=60></img></p>
+        <div class="box box-0" id="SSH"><p><img src="https://cdn-icons-png.flaticon.com/512/5262/5262032.png" width=50></img></p>
 
 <h2>SSH</h2>
 </div>
