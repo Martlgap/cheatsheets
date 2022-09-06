@@ -175,9 +175,45 @@ TESTTTTTTTTTTTTT</p>
 
 <h2>Git</h2>
 
+<h3>BASICS</h3>
+
 <hr />
 
-<h3>How to show URL of origin:</h3>
+<p>show modified files in working directory, staged for your next commit</p>
+
+<pre><code class="bash language-bash">git status
+</code></pre>
+
+<p>add a file as it looks now to your next commit (stage)</p>
+
+<pre><code class="bash language-bash">git add [file]
+</code></pre>
+
+<p>unstage a file while retaining the changes in working directory</p>
+
+<pre><code class="bash language-bash">git reset [file]
+</code></pre>
+
+<p>diff of what is changed but not staged</p>
+
+<pre><code class="bash language-bash">git diff
+</code></pre>
+
+<p>diff of what is staged but not yet committed</p>
+
+<pre><code class="bash language-bash">git diff --staged
+</code></pre>
+
+<p>commit your staged content as a new commit snapshot</p>
+
+<pre><code class="bash language-bash">git commit -m “[descriptive message]”
+</code></pre>
+
+<h3>INFORMATION</h3>
+
+<hr />
+
+<p>show URL of origin</p>
 
 <pre><code class="bash language-bash">git config --get remote.origin.url
 </code></pre>
@@ -185,6 +221,166 @@ TESTTTTTTTTTTTTT</p>
 <p>or if you require full output, and you are on a network that can reach the remote repo where the origin resides:</p>
 
 <pre><code class="bash language-bash">git remote show origin
+</code></pre>
+
+<h3>CREDENTIALS</h3>
+
+<hr />
+
+<p>store credentials</p>
+
+<pre><code class="bash language-bash">git config --global credential.helper store
+</code></pre>
+
+<h3>BRANCH &amp; MERGE</h3>
+
+<hr />
+
+<p>list your branches. a * will appear next to the currently active branch</p>
+
+<pre><code class="bash language-bash">git branch
+</code></pre>
+
+<p>create a new branch at the current commit</p>
+
+<pre><code class="bash language-bash">git branch [branch-name]
+</code></pre>
+
+<p>switch to another branch and check it out into your working directory</p>
+
+<pre><code class="bash language-bash">git checkout
+</code></pre>
+
+<p>merge the specified branch’s history into the current one</p>
+
+<pre><code class="bash language-bash">git merge [branch]
+</code></pre>
+
+<p>show all commits in the current branch’s history</p>
+
+<pre><code class="bash language-bash">git log
+</code></pre>
+
+<h3>REWRITING &amp; DELETING</h3>
+
+<hr />
+
+<p>delete the file from project and stage the removal for commit</p>
+
+<pre><code class="bash language-bash">git rm [file]
+</code></pre>
+
+<p>change an existing file path and stage the move</p>
+
+<pre><code class="bash language-bash">git mv [existing-path] [new-path]
+</code></pre>
+
+<p>show all commit logs with indication of any paths that moved</p>
+
+<pre><code class="bash language-bash">git log --stat -M
+</code></pre>
+
+<p>apply any commits of current branch ahead of specified one</p>
+
+<pre><code class="bash language-bash">git rebase [branch]
+</code></pre>
+
+<p>clear staging area, rewrite working tree from specified commit</p>
+
+<pre><code class="bash language-bash">git reset --hard [commit]
+</code></pre>
+
+<p>delete the file from project and stage the removal for commit</p>
+
+<pre><code class="bash language-bash">git rm [file]
+</code></pre>
+
+<p>change an existing file path and stage the move</p>
+
+<pre><code class="bash language-bash">git mv [existing-path] [new-path]
+</code></pre>
+
+<p>show all commit logs with indication of any paths that moved</p>
+
+<pre><code class="bash language-bash">git log --stat -M
+</code></pre>
+
+<p>Save modified and staged changes</p>
+
+<pre><code class="bash language-bash">git stash
+</code></pre>
+
+<p>list stack-order of stashed file changes</p>
+
+<pre><code class="bash language-bash">git stash list
+</code></pre>
+
+<p>write working from top of stash stack</p>
+
+<pre><code class="bash language-bash">git stash pop
+</code></pre>
+
+<p>discard the changes from top of stash stack</p>
+
+<pre><code class="bash language-bash">git stash drop
+</code></pre>
+
+<h3>INSPECT &amp; COMPARE</h3>
+
+<hr />
+
+<p>show the commit history for the currently active branch</p>
+
+<pre><code class="bash language-bash">git log
+</code></pre>
+
+<p>show the commits on branchA that are not on branchB</p>
+
+<pre><code class="bash language-bash">git log branchB..branchA
+</code></pre>
+
+<p>show the commits that changed file, even across renames</p>
+
+<pre><code class="bash language-bash">git log --follow [file]
+</code></pre>
+
+<p>show the diff of what is in branchA that is not in branchB</p>
+
+<pre><code class="bash language-bash">git diff branchB...branchA
+</code></pre>
+
+<p>show any object in Git in human-readable format</p>
+
+<pre><code class="bash language-bash">git show [SHA]
+</code></pre>
+
+<p>add a git URL as an alias</p>
+
+<pre><code class="bash language-bash">git remote add [alias] [url]
+</code></pre>
+
+<h3>SHARE &amp; UPDATE</h3>
+
+<hr />
+
+<p>fetch down all the branches from that Git remote</p>
+
+<pre><code class="bash language-bash">git fetch [alias]
+</code></pre>
+
+<p>merge a remote branch into your current branch to bring it up to date</p>
+
+<pre><code class="bash language-bash">git merge [alias]/[branch]
+</code></pre>
+
+<p>Transmit local branch commits to the remote repository branch</p>
+
+<pre><code class="bash language-bash">git push [alias] [branch]
+</code></pre>
+
+<p>fetch and merge any commits from the tracking remote branch</p>
+
+<pre><code class="bash language-bash">git pull
 </code></pre>
 </div>
         <div class="box box-7" id="Tipps&Tricks"><h2>SSL Problem when downloading via Python Code on Mac OS</h2>
