@@ -154,7 +154,7 @@
 
     <div class="container">
       <div class="container2">
-        <div class="box box-0" id="Ubuntu"><p><img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Ubuntu-Logo<em>ohne</em>Schriftzug.svg" width=60px></img></p>
+        <div class="box box-0" id="Ubuntu"><p><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" width=60px></img></p>
 
 <h2>Setup Ubuntu</h2>
 
@@ -224,13 +224,15 @@ echo "export DISPLAY=localhost:10.0" &gt;&gt; ~/.bashrc # To be able to show win
 
 <hr />
 </div>
-        <div class="box box-2" id="NVIDIA"><p><img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" width=50px></img></p>
+        <div class="box box-2" id="NVIDIA"><p><img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" width=60px></img></p>
 
 <h2>NVIDIA</h2>
 
-<h3>Manually Add NVIDIA-DEV Repository</h3>
+<hr />
 
-<p><img src="https://img.shields.io/badge/UBUNTU-18.04-FFA500" alt="OS" /></p>
+<p>Manually Add NVIDIA-DEV Repository</p>
+
+<p><img src="https://img.shields.io/badge/UBUNTU-18.04-FFA500" alt="OS" /> </p>
 
 <pre><code class="bash language-bash">wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
 sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -250,21 +252,21 @@ sudo apt-get update
 sudo apt search cuda
 </code></pre>
 
-<h3>Remove all NVIDIA Drivers and Stuff first</h3>
+<p>Remove all NVIDIA Drivers and Stuff first</p>
 
 <pre><code class="bash language-bash">sudo apt remove --purge *nvidia*
 sudo apt remove --purge *libcudnn*
 sudo apt remove --purge cuda
 </code></pre>
 
-<h3>For Tensorflow &gt;= 2.5</h3>
+<p>For Tensorflow &gt;= 2.5</p>
 
 <pre><code class="bash language-bash">sudo apt install cuda-11-2
 sudo apt install libcudnn8=8.1.1.33-1+cuda11.2
 sudo apt-mark hold libcudnn8 # this prevents from updating
 </code></pre>
 
-<h3>For Tensorflow &lt; 2.5</h3>
+<p>For Tensorflow &lt; 2.5</p>
 
 <pre><code class="bash language-bash">sudo apt install cuda-11-0
 sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
@@ -283,42 +285,42 @@ sudo apt-mark hold libcudnn8 # this prevents from updating
 
 <hr />
 
-<h3>Symlink</h3>
+<p>Symlink</p>
 
 <pre><code class="bash language-bash">ln -s &lt;target&gt; &lt;name-of-link&gt;
 </code></pre>
 
-<h3>RSync</h3>
+<p>RSync</p>
 
 <pre><code class="bash language-bash">rsync -ah --progress &lt;from&gt; &lt;to&gt;
 </code></pre>
 
-<h2>List Infos of CPU</h2>
+<p>List Infos of CPU</p>
 
 <pre><code class="shell language-shell">lscpu
 </code></pre>
 
-<h2>List Size of Folders:</h2>
+<p>List Size of Folders:</p>
 
 <pre><code class="shell language-shell">du -sh *
 </code></pre>
 
-<h2>Check size of specific folder:</h2>
+<p>Check size of specific folder:</p>
 
 <pre><code class="bash language-bash">du -hs &lt;folder&gt;
 </code></pre>
 
-<h2>Check how long PC is up:</h2>
+<p>Check how long PC is up:</p>
 
 <pre><code class="bash language-bash">uptime
 </code></pre>
 
-<h2>Get number of files in dir and subdirs:</h2>
+<p>Get number of files in dir and subdirs:</p>
 
 <pre><code class="bash language-bash">find . -type f | wc -l
 </code></pre>
 
-<h2>Check Disc Usage</h2>
+<p>Check Disc Usage</p>
 
 <pre><code class="bash language-bash">df -h
 </code></pre>
