@@ -5,7 +5,8 @@
 
 Manually Add NVIDIA-DEV Repository
 
-![OS](https://img.shields.io/badge/UBUNTU-18.04-FFA500)   
+![OS](https://img.shields.io/badge/UBUNTU-18.04-FFA500)
+.
 
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
@@ -16,8 +17,8 @@ sudo apt-get update
 sudo apt search cuda
 ```
 
-![OS](https://img.shields.io/badge/UBUNTU-20.04-FFA500)   
-
+![OS](https://img.shields.io/badge/UBUNTU-20.04-FFA500)
+.
 
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
