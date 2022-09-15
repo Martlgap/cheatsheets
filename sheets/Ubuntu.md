@@ -1,4 +1,4 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" width=60px></img>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" width=50px></img>
 ## Setup Ubuntu
 
 ---
