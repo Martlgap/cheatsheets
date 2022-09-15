@@ -1,4 +1,4 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/PyTorch_logo_black.svg" width=150></img>
+<img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/pytorch_logo_icon_169823.png" width=130></img>
 ## PyTorch
 
 ### FaceTransformer Requirements
