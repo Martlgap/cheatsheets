@@ -1,10 +1,12 @@
-<img src="https://cdn.icon-icons.com/icons2/1678/PNG/512/wondicon-ui-free-website_111210.png" width=50px></img>
+<img src="https://cdn.icon-icons.com/icons2/1678/PNG/512/wondicon-ui-free-website_111210.png" height=50px></img>
 
-## Interesting and Important Links
+## Nice Websites
+
+---
 
 ### Symbols & Graphics
 
----
+
 
 - [Free Vector Icons](https://www.flaticon.com/)
 - [Color Codes](https://htmlcolorcodes.com/)
@@ -12,8 +14,8 @@
 - [Color Palette 2](https://mycolor.space/?hex=%23845EC2&sub=1)
 - [Create Custom Badges](https://shields.io/)
 
-### Code Style
+---
 
---- 
+### Code Style
 
 - [black](https://black.readthedocs.io/en/stable/the_black_code_style.html)

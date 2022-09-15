@@ -1,7 +1,7 @@
-<img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" width=60px></img>
+<img src="https://logos-world.net/wp-content/uploads/2020/11/Nvidia-Emblem.png" height=50px></img>
 ## NVIDIA
 
- ---
+---
 
 Manually Add NVIDIA-DEV Repository
 

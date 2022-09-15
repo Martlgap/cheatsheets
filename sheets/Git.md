@@ -1,10 +1,10 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" width=60px></img>
+<img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height=40px></img>
 
 ## Git
 
-### BASICS
-
 ---
+
+### BASICS
 
 show modified files in working directory, staged for your next commit
 
@@ -42,9 +42,9 @@ commit your staged content as a new commit snapshot
 git commit -m “[descriptive message]”
 ```
 
-### INFORMATION
-
 ---
+
+### INFORMATION
 
 show URL of origin
 
@@ -58,19 +58,18 @@ or if you require full output, and you are on a network that can reach the remot
 git remote show origin
 ```
 
-### CREDENTIALS
-
 ---
 
-store credentials
+### CREDENTIALS
 
+store credentials
 ```bash
 git config --global credential.helper store
 ```
 
-### BRANCH & MERGE
-
 ---
+
+### BRANCH & MERGE
 
 list your branches. a \* will appear next to the currently active branch
 
@@ -102,9 +101,9 @@ show all commits in the current branch’s history
 git log
 ```
 
-### REWRITING & DELETING
-
 ---
+
+### REWRITING & DELETING
 
 delete the file from project and stage the removal for commit
 
@@ -178,9 +177,9 @@ discard the changes from top of stash stack
 git stash drop
 ```
 
-### INSPECT & COMPARE
-
 ---
+
+### INSPECT & COMPARE
 
 show the commit history for the currently active branch
 
@@ -218,9 +217,9 @@ add a git URL as an alias
 git remote add [alias] [url]
 ```
 
-### SHARE & UPDATE
-
 ---
+
+### SHARE & UPDATE
 
 fetch down all the branches from that Git remote
 
@@ -246,9 +245,9 @@ fetch and merge any commits from the tracking remote branch
 git pull
 ```
 
-### TIPPS&TRICKS
-
 ---
+
+### TIPPS&TRICKS
 
 Checkout GIT from specific date
 ```bash

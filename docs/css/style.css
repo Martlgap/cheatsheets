@@ -89,6 +89,8 @@ h1:last-of-type {
 
 .box {
   width: 500px;
+  height: 800px;
+  overflow: scroll;
   border-radius: 5px;
   box-shadow: 0px 30px 40px -20px var(--grayishBlue);
   padding: 30px;
@@ -99,8 +101,6 @@ h1:last-of-type {
 img {
   float: right;
 }
-
-
 
 h2 {
   color: var(--varyDarkBlue);
@@ -196,6 +196,7 @@ svg {
 @media (max-width: 450px) {
   .box {
     width: 90%;
+    height: auto;
   }
   .container1 {
     width: 95%;
@@ -206,9 +207,25 @@ svg {
   }
 }
 
-@media (max-width: 1540px) and (min-width: 450px) {
+@media (max-width: 960px) and (min-width: 450px) {
   .box {
     width: 350px;
+    height: auto;
+  }
+
+  .container1 {
+    width: 60%;
+  }
+
+  .container2 {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1540px) and (min-width: 960px) {
+  .box {
+    width: 350px;
+    height: 500px;
   }
 
   .container1 {

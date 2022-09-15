@@ -1,7 +1,9 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" width=50px></img>
-## Setup Ubuntu
+## Ubuntu
 
 ---
+
+### Fresh Setup
 
 Install nvtop (GPU Monitoring Tool)
 ```bash

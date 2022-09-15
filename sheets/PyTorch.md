@@ -1,9 +1,9 @@
-<img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/pytorch_logo_icon_169823.png" width=130></img>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" height="50px"></img>
 ## PyTorch
 
-### FaceTransformer Requirements
-
 ---
+
+### FaceTransformer Requirements
 
 Torch and Torchvision need specific versions for graphic cards
 
@@ -28,7 +28,7 @@ pip install Ipython
 ```
 
 Go to [https://github.com/zhongyy/Face-Transformer/tree/main/copy-to-vit_pytorch-path](https://github.com/zhongyy/Face-Transformer/tree/main/copy-to-vit_pytorch-path) and
-copy the following files to the vit_pytorch package path in your virtual environment (venv/lib/../../vit_pytorch/):
+copy the following files to the vit\_pytorch package path in your virtual environment (venv/lib/../../vit_pytorch/):
 
 - vits_face.py 
 - vit_face.py 
