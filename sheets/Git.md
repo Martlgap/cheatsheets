@@ -245,3 +245,18 @@ fetch and merge any commits from the tracking remote branch
 ```bash
 git pull
 ```
+
+### TIPPS&TRICKS
+
+---
+
+Checkout GIT from specific date
+```bash
+git checkout `git rev-list -n 1 --before="2020-05-27 13:37" master`
+```
+
+How to trigger Push on Tags:
+```bash
+git tag 0.2
+git push -f --tags
+```
