@@ -259,3 +259,17 @@ How to trigger Push on Tags:
 git tag 0.2
 git push -f --tags
 ```
+
+Clean Cache etc.
+```bash
+git gc
+```
+
+Delete Files from History (e.g. accidentantly pushed large files to repo)
+```bash
+git filter-branch --tree-filter 'rm -rf vendor/gems' HEAD
+git push origin master --force
+```
+
+-f means it deletes the file also locally
+--cached means the file remains locally
