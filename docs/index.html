@@ -41,6 +41,17 @@
       <div class="container1">
         <div class="item">
           <button class="btn btn-0">
+            <a href="#Tipps&Tricks">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span>Tipps&Tricks</span>
+            </a>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-1">
             <a href="#Ubuntu">
               <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
@@ -51,24 +62,13 @@
           </button>
         </div>
         <div class="item">
-          <button class="btn btn-1">
-            <a href="#SSH">
-              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-              </svg>
-              <span>SSH</span>
-            </a>
-          </button>
-        </div>
-        <div class="item">
           <button class="btn btn-2">
-            <a href="#NVIDIA">
+            <a href="#Git">
               <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
               </svg>
-              <span>NVIDIA</span>
+              <span>Git</span>
             </a>
           </button>
         </div>
@@ -96,6 +96,17 @@
         </div>
         <div class="item">
           <button class="btn btn-5">
+            <a href="#NVIDIA">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span>NVIDIA</span>
+            </a>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-6">
             <a href="#PyCharm">
               <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
@@ -106,24 +117,13 @@
           </button>
         </div>
         <div class="item">
-          <button class="btn btn-6">
-            <a href="#Links">
-              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-              </svg>
-              <span>Links</span>
-            </a>
-          </button>
-        </div>
-        <div class="item">
           <button class="btn btn-7">
-            <a href="#Git">
+            <a href="#SSH">
               <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
               </svg>
-              <span>Git</span>
+              <span>SSH</span>
             </a>
           </button>
         </div>
@@ -140,12 +140,12 @@
         </div>
         <div class="item">
           <button class="btn btn-9">
-            <a href="#Tipps&Tricks">
+            <a href="#Links">
               <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
               </svg>
-              <span>Tipps&Tricks</span>
+              <span>Links</span>
             </a>
           </button>
         </div>
@@ -154,7 +154,71 @@
 
     <div class="container">
       <div class="container2">
-        <div class="box box-0" id="Ubuntu"><p><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" width=50px></img></p>
+        <div class="box box-0" id="Tipps&Tricks"><p><img src="https://cdn-icons-png.flaticon.com/512/564/564427.png" height="50px"></img></p>
+
+<h2>Tipps&amp;Tricks</h2>
+
+<hr />
+
+<p>Problem with SSH Keys: "..differs from the key for IP address ... "</p>
+
+<p>Do on remote machine:</p>
+
+<pre><code class="bash language-bash">ssh-keygen -R 129.187.227.220
+</code></pre>
+
+<p>SSL Problem when downloading via Python Code on Mac OS</p>
+
+<pre><code class="bash language-bash">/Applications/Python\ 3.6/Install\ Certificates.command
+</code></pre>
+
+<p>Error: Core Dumped when importing tensorflow in python
+Most likely tensorflow package was build for AVX support and CPU does not support it! </p>
+
+<p>How to change CUDA Version on Machine:</p>
+
+<pre><code class="bash language-bash">sudo rm /usr/local/cuda
+sudo ln -s /usr/local/cuda-11.0 /usr/local/cuda
+</code></pre>
+
+<p>Adjust rights to Folder:</p>
+
+<pre><code class="bash language-bash">chmod g+w /folder/ -R
+</code></pre>
+
+<p>When facing the following error: 
+ImportError: bad magic number in : b'\x03\xf3\r\n'</p>
+
+<pre><code class="bash language-bash">find . -name "*.pyc" -exec rm -f {} \;
+</code></pre>
+
+<p>Split .tar files into many files with specific maximum file size</p>
+
+<p>split -b 1024m file.tar.gz</p>
+
+<p>tar -C ../myfolder -xfvz /mytarfile.tar (extract into spec folder)</p>
+
+<p>| Mehrere Dateien als GZIP-Archiv komprimieren  | tar cfvz Archiv.tar.gz datei1 datei2  | Archiv.tar.gz       |
+|-----------------------------------------------|---------------------------------------|---------------------|
+| GZIP-Archiv entpacken                         | tar xfvz Archiv.tar.gz                | datei1, datei2, ... |</p>
+
+<p>Debug Python Code with inline Terminal</p>
+
+<pre><code class="python language-python">import pdb
+pdb.set_trace()
+</code></pre>
+
+<p>Set Path for loading Modules:</p>
+
+<pre><code class="bash language-bash">PYTHONPATH=/usr/home/.... python &lt;script.py&gt;
+</code></pre>
+
+<p>Problem with SSH Keys: 
+..differs from the key for IP address ... 
+on remote machine:
+ssh-keygen -R 129.187.227.220</p>
+</div>
+        <div class="box box-1" id="Ubuntu"><p><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" width=50px></img></p>
 
 <h2>Ubuntu</h2>
 
@@ -220,148 +284,7 @@ echo "LD_LIBRARY_PATH=\"${LD_LIBRARY_PATH}:/usr/local/cuda-11.2/lib64\"" &gt;&gt
 echo "export DISPLAY=localhost:10.0" &gt;&gt; ~/.bashrc # To be able to show window on other machine
 </code></pre>
 </div>
-        <div class="box box-1" id="SSH"><p><img src="https://cdn-icons-png.flaticon.com/512/5262/5262032.png" width=50></img></p>
-
-<h2>SSH</h2>
-
-<hr />
-</div>
-        <div class="box box-2" id="NVIDIA"><p><img src="https://logos-world.net/wp-content/uploads/2020/11/Nvidia-Emblem.png" height=50px></img></p>
-
-<h2>NVIDIA</h2>
-
-<hr />
-
-<p>Manually Add NVIDIA-DEV Repository</p>
-
-<p><img src="https://img.shields.io/badge/UBUNTU-18.04-FFA500" alt="OS" />
-.</p>
-
-<pre><code class="bash language-bash">wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
-sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
-sudo apt-get update
-sudo apt search cuda
-</code></pre>
-
-<p><img src="https://img.shields.io/badge/UBUNTU-20.04-FFA500" alt="OS" />
-.</p>
-
-<pre><code class="bash language-bash">wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
-sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
-sudo apt-get update
-sudo apt search cuda
-</code></pre>
-
-<p>Remove all NVIDIA Drivers and Stuff first</p>
-
-<pre><code class="bash language-bash">sudo apt remove --purge *nvidia*
-sudo apt remove --purge *libcudnn*
-sudo apt remove --purge cuda
-</code></pre>
-
-<p>For Tensorflow &gt;= 2.5</p>
-
-<pre><code class="bash language-bash">sudo apt install cuda-11-2
-sudo apt install libcudnn8=8.1.1.33-1+cuda11.2
-sudo apt-mark hold libcudnn8 # this prevents from updating
-</code></pre>
-
-<p>For Tensorflow &lt; 2.5</p>
-
-<pre><code class="bash language-bash">sudo apt install cuda-11-0
-sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
-sudo apt-mark hold libcudnn8 # this prevents from updating
-</code></pre>
-</div>
-        <div class="box box-3" id="MacOS"><p><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/MacOS_logo_%282017%29.svg" height="50px"></img></p>
-
-<h2>MacOS</h2>
-
-<hr />
-
-<h3>Fresh Setup</h3>
-</div>
-        <div class="box box-4" id="Terminal"><p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/High-contrast-utilities-terminal.svg" height=55px></img></p>
-
-<h2>Terminal</h2>
-
-<hr />
-
-<p>Symlink</p>
-
-<pre><code class="bash language-bash">ln -s &lt;target&gt; &lt;name-of-link&gt;
-</code></pre>
-
-<p>RSync</p>
-
-<pre><code class="bash language-bash">rsync -ah --progress &lt;from&gt; &lt;to&gt;
-</code></pre>
-
-<p>List Infos of CPU</p>
-
-<pre><code class="shell language-shell">lscpu
-</code></pre>
-
-<p>List Size of Folders:</p>
-
-<pre><code class="shell language-shell">du -sh *
-</code></pre>
-
-<p>Check size of specific folder:</p>
-
-<pre><code class="bash language-bash">du -hs &lt;folder&gt;
-</code></pre>
-
-<p>Check how long PC is up:</p>
-
-<pre><code class="bash language-bash">uptime
-</code></pre>
-
-<p>Get number of files in dir and subdirs:</p>
-
-<pre><code class="bash language-bash">find . -type f | wc -l
-</code></pre>
-
-<p>Check Disc Usage</p>
-
-<pre><code class="bash language-bash">df -h
-</code></pre>
-</div>
-        <div class="box box-5" id="PyCharm"><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg" height="50px"></img></p>
-
-<h2>PyCharm</h2>
-
-<hr />
-</div>
-        <div class="box box-6" id="Links"><p><img src="https://cdn.icon-icons.com/icons2/1678/PNG/512/wondicon-ui-free-website_111210.png" height=50px></img></p>
-
-<h2>Nice Websites</h2>
-
-<hr />
-
-<h3>Symbols &amp; Graphics</h3>
-
-<ul>
-<li><a rel="noopener" target="_blank" href="https://www.flaticon.com/">Free Vector Icons</a></li>
-<li><a rel="noopener" target="_blank" href="https://htmlcolorcodes.com/">Color Codes</a></li>
-<li><a rel="noopener" target="_blank" href="https://learnui.design/tools/data-color-picker.html#palette">Color Palette</a></li>
-<li><a rel="noopener" target="_blank" href="https://mycolor.space/?hex=%23845EC2&amp;sub=1">Color Palette 2</a></li>
-<li><a rel="noopener" target="_blank" href="https://shields.io/">Create Custom Badges</a></li>
-</ul>
-
-<hr />
-
-<h3>Code Style</h3>
-
-<ul>
-<li><a rel="noopener" target="_blank" href="https://black.readthedocs.io/en/stable/the_black_code_style.html">black</a></li>
-</ul>
-</div>
-        <div class="box box-7" id="Git"><p><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height=40px></img></p>
+        <div class="box box-2" id="Git"><p><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height=40px></img></p>
 
 <h2>Git</h2>
 
@@ -587,6 +510,137 @@ sudo apt-mark hold libcudnn8 # this prevents from updating
 <pre><code class="bash language-bash">git tag 0.2
 git push -f --tags
 </code></pre>
+
+<p>Clean Cache etc.</p>
+
+<pre><code class="bash language-bash">git gc
+</code></pre>
+
+<p>Delete Files from History (e.g. accidentantly pushed large files to repo)</p>
+
+<pre><code class="bash language-bash">git filter-branch --tree-filter 'rm -rf vendor/gems' HEAD
+git push origin master --force
+</code></pre>
+
+<p>-f means it deletes the file also locally
+--cached means the file remains locally</p>
+</div>
+        <div class="box box-3" id="MacOS"><p><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/MacOS_logo_%282017%29.svg" height="50px"></img></p>
+
+<h2>MacOS</h2>
+
+<hr />
+
+<h3>Fresh Setup</h3>
+</div>
+        <div class="box box-4" id="Terminal"><p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/High-contrast-utilities-terminal.svg" height=55px></img></p>
+
+<h2>Terminal</h2>
+
+<hr />
+
+<p>Symlink</p>
+
+<pre><code class="bash language-bash">ln -s &lt;target&gt; &lt;name-of-link&gt;
+</code></pre>
+
+<p>RSync</p>
+
+<pre><code class="bash language-bash">rsync -ah --progress &lt;from&gt; &lt;to&gt;
+</code></pre>
+
+<p>List Infos of CPU</p>
+
+<pre><code class="shell language-shell">lscpu
+</code></pre>
+
+<p>List Size of Folders:</p>
+
+<pre><code class="shell language-shell">du -sh *
+</code></pre>
+
+<p>Check size of specific folder:</p>
+
+<pre><code class="bash language-bash">du -hs &lt;folder&gt;
+</code></pre>
+
+<p>Check how long PC is up:</p>
+
+<pre><code class="bash language-bash">uptime
+</code></pre>
+
+<p>Get number of files in dir and subdirs:</p>
+
+<pre><code class="bash language-bash">find . -type f | wc -l
+</code></pre>
+
+<p>Check Disc Usage</p>
+
+<pre><code class="bash language-bash">df -h
+</code></pre>
+</div>
+        <div class="box box-5" id="NVIDIA"><p><img src="https://logos-world.net/wp-content/uploads/2020/11/Nvidia-Emblem.png" height=50px></img></p>
+
+<h2>NVIDIA</h2>
+
+<hr />
+
+<p>Manually Add NVIDIA-DEV Repository</p>
+
+<p><img src="https://img.shields.io/badge/UBUNTU-18.04-FFA500" alt="OS" />
+.</p>
+
+<pre><code class="bash language-bash">wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+sudo apt-get update
+sudo apt search cuda
+</code></pre>
+
+<p><img src="https://img.shields.io/badge/UBUNTU-20.04-FFA500" alt="OS" />
+.</p>
+
+<pre><code class="bash language-bash">wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+sudo apt-get update
+sudo apt search cuda
+</code></pre>
+
+<p>Remove all NVIDIA Drivers and Stuff first</p>
+
+<pre><code class="bash language-bash">sudo apt remove --purge *nvidia*
+sudo apt remove --purge *libcudnn*
+sudo apt remove --purge cuda
+</code></pre>
+
+<p>For Tensorflow &gt;= 2.5</p>
+
+<pre><code class="bash language-bash">sudo apt install cuda-11-2
+sudo apt install libcudnn8=8.1.1.33-1+cuda11.2
+sudo apt-mark hold libcudnn8 # this prevents from updating
+</code></pre>
+
+<p>For Tensorflow &lt; 2.5</p>
+
+<pre><code class="bash language-bash">sudo apt install cuda-11-0
+sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
+sudo apt-mark hold libcudnn8 # this prevents from updating
+</code></pre>
+</div>
+        <div class="box box-6" id="PyCharm"><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg" height="50px"></img></p>
+
+<h2>PyCharm</h2>
+
+<hr />
+</div>
+        <div class="box box-7" id="SSH"><p><img src="https://cdn-icons-png.flaticon.com/512/5262/5262032.png" width=50></img></p>
+
+<h2>SSH</h2>
+
+<hr />
 </div>
         <div class="box box-8" id="PyTorch"><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" height="50px"></img></p>
 
@@ -625,69 +679,29 @@ copy the following files to the vit_pytorch package path in your virtual environ
 <li>__init__.py</li>
 </ul>
 </div>
-        <div class="box box-9" id="Tipps&Tricks"><p><img src="https://cdn-icons-png.flaticon.com/512/564/564427.png" height="50px"></img></p>
+        <div class="box box-9" id="Links"><p><img src="https://cdn.icon-icons.com/icons2/1678/PNG/512/wondicon-ui-free-website_111210.png" height=50px></img></p>
 
-<h2>Tipps&amp;Tricks</h2>
+<h2>Nice Websites</h2>
 
 <hr />
 
-<p>Problem with SSH Keys: "..differs from the key for IP address ... "</p>
+<h3>Symbols &amp; Graphics</h3>
 
-<p>Do on remote machine:</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://www.flaticon.com/">Free Vector Icons</a></li>
+<li><a rel="noopener" target="_blank" href="https://htmlcolorcodes.com/">Color Codes</a></li>
+<li><a rel="noopener" target="_blank" href="https://learnui.design/tools/data-color-picker.html#palette">Color Palette</a></li>
+<li><a rel="noopener" target="_blank" href="https://mycolor.space/?hex=%23845EC2&amp;sub=1">Color Palette 2</a></li>
+<li><a rel="noopener" target="_blank" href="https://shields.io/">Create Custom Badges</a></li>
+</ul>
 
-<pre><code class="bash language-bash">ssh-keygen -R 129.187.227.220
-</code></pre>
+<hr />
 
-<p>SSL Problem when downloading via Python Code on Mac OS</p>
+<h3>Code Style</h3>
 
-<pre><code class="bash language-bash">/Applications/Python\ 3.6/Install\ Certificates.command
-</code></pre>
-
-<p>Error: Core Dumped when importing tensorflow in python
-Most likely tensorflow package was build for AVX support and CPU does not support it! </p>
-
-<p>How to change CUDA Version on Machine:</p>
-
-<pre><code class="bash language-bash">sudo rm /usr/local/cuda
-sudo ln -s /usr/local/cuda-11.0 /usr/local/cuda
-</code></pre>
-
-<p>Adjust rights to Folder:</p>
-
-<pre><code class="bash language-bash">chmod g+w /folder/ -R
-</code></pre>
-
-<p>When facing the following error: 
-ImportError: bad magic number in : b'\x03\xf3\r\n'</p>
-
-<pre><code class="bash language-bash">find . -name "*.pyc" -exec rm -f {} \;
-</code></pre>
-
-<p>Split .tar files into many files with specific maximum file size</p>
-
-<p>split -b 1024m file.tar.gz</p>
-
-<p>tar -C ../myfolder -xfvz /mytarfile.tar (extract into spec folder)</p>
-
-<p>| Mehrere Dateien als GZIP-Archiv komprimieren  | tar cfvz Archiv.tar.gz datei1 datei2  | Archiv.tar.gz       |
-|-----------------------------------------------|---------------------------------------|---------------------|
-| GZIP-Archiv entpacken                         | tar xfvz Archiv.tar.gz                | datei1, datei2, ... |</p>
-
-<p>Debug Python Code with inline Terminal</p>
-
-<pre><code class="python language-python">import pdb
-pdb.set_trace()
-</code></pre>
-
-<p>Set Path for loading Modules:</p>
-
-<pre><code class="bash language-bash">PYTHONPATH=/usr/home/.... python &lt;script.py&gt;
-</code></pre>
-
-<p>Problem with SSH Keys: 
-..differs from the key for IP address ... 
-on remote machine:
-ssh-keygen -R 129.187.227.220</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://black.readthedocs.io/en/stable/the_black_code_style.html">black</a></li>
+</ul>
 </div>
       </div>
     </div>
