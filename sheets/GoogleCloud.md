@@ -46,3 +46,10 @@ via ssh:
 gcloud cloud-shell ssh
 ```
 
+## Update Code in GCloud via ssh
+
+cd into Repo in GCloud
+```bash
+git fetch --all
+git reset --hard origin/main
+```
