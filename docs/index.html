@@ -727,6 +727,22 @@ timeout: "1600s"
 <pre><code class="bash language-bash">git fetch --all
 git reset --hard origin/main
 </code></pre>
+
+<h2>Connect to SQL Database</h2>
+
+<pre><code class="bash language-bash">gcloud sql connect flask-demo --user=USERNAME
+</code></pre>
+
+<pre><code class="sql language-sql">show databases;
+use YOURDB;
+</code></pre>
+
+<h2>Lessons Learned:</h2>
+
+<ul>
+<li>App Engine is READONLY</li>
+<li>MySQL Database is not the same as SQLite regarding maximum Password Length, Datetime Format etc.</li>
+</ul>
 </div>
         <div class="box box-9" id="SSH"><p><img src="https://cdn-icons-png.flaticon.com/512/5262/5262032.png" width=50></img></p>
 
