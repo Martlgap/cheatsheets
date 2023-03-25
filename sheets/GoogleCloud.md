@@ -53,3 +53,19 @@ cd into Repo in GCloud
 git fetch --all
 git reset --hard origin/main
 ```
+
+## Connect to SQL Database
+```bash
+gcloud sql connect flask-demo --user=USERNAME
+```
+
+```sql
+show databases;
+use YOURDB;
+```
+
+## Lessons Learned: 
+- App Engine is READONLY
+- MySQL Database is not the same as SQLite regarding maximum Password Length, Datetime Format etc.
+
+
