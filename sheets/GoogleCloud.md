@@ -67,5 +67,6 @@ use YOURDB;
 ## Lessons Learned: 
 - App Engine is READONLY
 - MySQL Database is not the same as SQLite regarding maximum Password Length, Datetime Format etc.
+- Random generated Secret does not work for UserManagement if live - might be due to several parallel instances
 
 
