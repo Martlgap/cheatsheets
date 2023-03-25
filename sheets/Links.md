@@ -19,3 +19,9 @@
 ### Code Style
 
 - [black](https://black.readthedocs.io/en/stable/the_black_code_style.html)
+
+---
+
+### Tutorials
+
+- [gcloud app engine + sql](https://www.smashingmagazine.com/2020/08/api-flask-google-cloudsql-app-engine/)
