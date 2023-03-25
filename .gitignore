@@ -351,3 +351,5 @@ MigrationBackup/
 
 # Virtual Environments
 venv/
+
+.DS_Store
