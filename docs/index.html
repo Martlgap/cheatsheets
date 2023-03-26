@@ -140,6 +140,17 @@
         </div>
         <div class="item">
           <button class="btn btn-9">
+            <a href="#Tensorflow">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span>Tensorflow</span>
+            </a>
+          </button>
+        </div>
+        <div class="item">
+          <button class="btn btn-10">
             <a href="#SSH">
               <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
@@ -150,7 +161,7 @@
           </button>
         </div>
         <div class="item">
-          <button class="btn btn-10">
+          <button class="btn btn-11">
             <a href="#PyTorch">
               <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
@@ -753,13 +764,111 @@ use YOURDB;
 <li>Random generated Secret does not work for UserManagement if live - might be due to several parallel instances</li>
 </ul>
 </div>
-        <div class="box box-9" id="SSH"><p><img src="https://cdn-icons-png.flaticon.com/512/5262/5262032.png" width=50></img></p>
+        <div class="box box-9" id="Tensorflow"><p><img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" height="50px"></img></p>
+
+<h2>Tensorflow</h2>
+
+<hr />
+
+<h3>Build Tensorflow from Source</h3>
+
+<p><strong>On Remote Machine (Where you want to use Tensorflow)</strong></p>
+
+<p>Go to user dir</p>
+
+<pre><code class="shell language-shell">cd ~
+</code></pre>
+
+<p>Clone tensorflow repository</p>
+
+<pre><code class="shell language-shell">git clone https://github.com/tensorflow/tensorflow.git
+cd tensorflow
+</code></pre>
+
+<p>Checkout the Version you would like to build with </p>
+
+<pre><code class="shell language-shell">git checkout branch_name  # r1.9, r1.10, etc.
+</code></pre>
+
+<p><strong>Install bazel</strong></p>
+
+<p>Go to user dir</p>
+
+<pre><code class="shell language-shell">cd ~
+</code></pre>
+
+<p>Install packages</p>
+
+<pre><code class="shell language-shell">sudo apt install g++ unzip zip
+sudo apt-get install openjdk-11-jdk
+</code></pre>
+
+<p>Download installer from <a rel="noopener" target="_blank" href="https://github.com/bazelbuild/bazel/releases">Bazel Versions</a> 
+You need to check which bazel version is compatible to the tensorflow version you want to build
+Look into tensorflow repo: 
+In configure.py there is a flag with min and max bazel version.
+Install bazel with</p>
+
+<pre><code class="shell language-shell">chmod +x bazel-&lt;version&gt;-installer-linux-x86_64.sh
+./bazel-&lt;version&gt;-installer-linux-x86_64.sh --user
+</code></pre>
+
+<p>Add Bazel Bin directory to PATH </p>
+
+<pre><code class="shell language-shell">export PATH="$PATH:$HOME/bin"
+</code></pre>
+
+<p>see also: <a rel="noopener" target="_blank" href="https://docs.bazel.build/versions/master/install-ubuntu.html#install-with-installer-ubuntu">Link to Install Guide</a></p>
+
+<p><strong>repare tensorflow build</strong></p>
+
+<p>Install packages</p>
+
+<pre><code class="shell language-shell">sudo apt install python3-dev python3-pip
+</code></pre>
+
+<p>Prepare pip packages</p>
+
+<pre><code class="shell language-shell">pip install -U --user pip six 'numpy&lt;1.19.0' wheel setuptools mock 'future&gt;=0.17.1'
+pip install -U --user keras_applications --no-deps
+pip install -U --user keras_preprocessing --no-deps
+</code></pre>
+
+<p>Configure the build</p>
+
+<pre><code class="shell language-shell">./configure
+</code></pre>
+
+<p>1) Link to python3 location of system!
+2) Set CUDA to yes, all others no
+3) Which Compute Capability of Graphic Card can be checked here: <a rel="noopener" target="_blank" href="https://developer.nvidia.com/cuda-gpus">NVIDIA-GPU-List</a>
+4) No clang
+5) -march=native if you want to build for that specific PC, otherwise check flags for your CPU</p>
+
+<p><strong>Build the Pip Package</strong></p>
+
+<p>This command actually builds the package but does not save it as .whl file</p>
+
+<pre><code class="shell language-shell">bazel build --config=opt --config=cuda //tensorflow/tools/pip_package:build_pip_package
+</code></pre>
+
+<p>Save the output as .whl file</p>
+
+<pre><code class="shell language-shell">./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+</code></pre>
+
+<p><strong>Install with</strong></p>
+
+<pre><code class="shell language-shell">pip install /tmp/tensorflow_pkg/tensorflow-version-tags.whl
+</code></pre>
+</div>
+        <div class="box box-10" id="SSH"><p><img src="https://cdn-icons-png.flaticon.com/512/5262/5262032.png" width=50></img></p>
 
 <h2>SSH</h2>
 
 <hr />
 </div>
-        <div class="box box-10" id="PyTorch"><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" height="50px"></img></p>
+        <div class="box box-11" id="PyTorch"><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" height="50px"></img></p>
 
 <h2>PyTorch</h2>
 
