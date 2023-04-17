@@ -54,6 +54,11 @@ git fetch --all
 git reset --hard origin/main
 ```
 
+## See logs from App Engine
+```bash
+gcloud app logs tail -s default
+```
+
 ## Connect to SQL Database
 ```bash
 gcloud sql connect flask-demo --user=USERNAME

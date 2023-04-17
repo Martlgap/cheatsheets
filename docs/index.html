@@ -747,6 +747,11 @@ timeout: "1600s"
 git reset --hard origin/main
 </code></pre>
 
+<h2>See logs from App Engine</h2>
+
+<pre><code class="bash language-bash">gcloud app logs tail -s default
+</code></pre>
+
 <h2>Connect to SQL Database</h2>
 
 <pre><code class="bash language-bash">gcloud sql connect flask-demo --user=USERNAME
