@@ -273,3 +273,12 @@ git push origin master --force
 
 -f means it deletes the file also locally
 --cached means the file remains locally
+
+
+If git hangs after the "Total: ..."-Line:
+
+```bash
+git config --global http.postBuffer 157286400
+```
+that increases the Buffer size for the largest file
+
