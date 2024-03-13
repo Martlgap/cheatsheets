@@ -352,4 +352,6 @@ MigrationBackup/
 # Virtual Environments
 venv/
 
+# Exclude DS Store files
 .DS_Store
+*.DS_Store
