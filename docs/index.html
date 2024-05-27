@@ -250,7 +250,7 @@ ssh-keygen -R 129.187.227.220</p>
 
 <h3>On Remote</h3>
 
-<p>Install tmux and oh-my-zsh:</p>
+<p>1) Install tmux and oh-my-zsh:</p>
 
 <pre><code class="bash language-bash">sudo apt-get install tmux
 </code></pre>
@@ -258,52 +258,57 @@ ssh-keygen -R 129.187.227.220</p>
 <pre><code class="bash language-bash">sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 </code></pre>
 
-<p>Check if user has rights to change shell in /etc/passwd -> If there is not the user, add the following line:</p>
+<p>2) Check if user has rights to change shell in /etc/passwd -> If there is not the user, add the following line:</p>
 
 <pre><code class="text language-text">&lt;username&gt;:x:1634231:100:&lt;fullname&gt;:&lt;pathtohomefolder&gt;:&lt;/usr/bin/zsh&gt;
 </code></pre>
 
-<p>Then run</p>
+<p>3) Then run</p>
 
 <pre><code class="bash language-bash">nano ~/.tmux.conf
 </code></pre>
 
 <p>to configure the settings for the remote terminal appearance.</p>
 
-<p>Add the following into the file (maybe the path to zsh needs to be adjusted):</p>
+<p>4) Add the following into the file (maybe the path to zsh needs to be adjusted):</p>
 
 <pre><code class="text language-text">set -g default-terminal "screen-256color"
 set -g default-command /usr/bin/zsh
-
 </code></pre>
 
-<p>Then source the tmux config</p>
+<p>5) Then source the tmux config</p>
 
 <pre><code class="bash language-bash">tmux source ~/.tmux.conf
 </code></pre>
 
-<p>And for nice and convenient naming of the Prompts add the following to the .zshrc file in ~/</p>
+<p>6) And for nice and convenient naming of the Prompts add the following to the .zshrc file in ~/</p>
 
 <pre><code class="text language-text">PROMPT="%F{red}NAMEOFREMOTE%f$PROMPT"
 </code></pre>
 
+<p>7) Source the .zshrc file:</p>
+
+<pre><code class="bash language-bash">source ~/.zshrc
+</code></pre>
+
 <h3>On Local</h3>
 
-<p>Install iTerm2 and Tmux</p>
+<p>1) Install iTerm2 and Tmux</p>
 
 <pre><code class="bash language-bash">brew install tmux
 </code></pre>
 
-<p>Download and install <a rel="noopener" target="_blank" href="https://iterm2.com">iTerm2</a></p>
+<p>2) Download and install <a rel="noopener" target="_blank" href="https://iterm2.com">iTerm2</a></p>
 
-<p>In the toolbelt of iterm2 add a new profile and edit. 
-Then:</p>
+<p>3) In the toolbelt of iterm2 add a new profile and edit. </p>
 
-<p>Profiles -> your new Profile -> General -> Command -> Switch from "Login Shell" to "Command" and insert:</p>
+<p>4) Then:
+Profiles -> your new Profile -> General -> Command -> Switch from "Login Shell" to "Command" and insert:</p>
 
-<p>sh -c "PATH=/usr/local/bin:$PATH; ssh -t <you@remote-ip> \"tmux -CC new -A -s <name-of-session>\""</p>
+<pre><code class="bash language-bash">sh -c "PATH=/usr/local/bin:$PATH; ssh -t &lt;you@remote-ip&gt; \"tmux -CC new -A -s &lt;name-of-session&gt;\""
+</code></pre>
 
-<p>Go to settings in iterm2 and tick the "Automatically bury tmux client session". </p>
+<p>5) Go to settings in iterm2 and tick the "Automatically bury tmux client session". </p>
 
 <p>Don´t forget to make a proper ssh config and use ssh keys to sign in.</p>
 </div>
